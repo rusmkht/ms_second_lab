@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/editTextCardHolderName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:hint="Cardholder Name"
+        android:inputType="text"/>
+
+
+    <EditText
+        android:id="@+id/editTextCardNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextCardHolderName"
+        android:layout_margin="16dp"
+        android:maxLength="19"
+        android:hint="Card Number"
+        android:inputType="number" />
+
+
+    <LinearLayout
+        android:id="@+id/expDateAndCvv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextCardNumber"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+
+        android:gravity="center_horizontal">
+
+        <EditText
+            android:id="@+id/editTextExpirationDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="12dp"
+            android:hint="Expiration Date (MM/YY)"
+            android:inputType="text"/>
+
+        <EditText
+            android:id="@+id/editTextCVV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:maxLength="3"
+            android:padding="12dp"
+            android:hint="CVV"
+            android:inputType="numberPassword"/>
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/editTextEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/expDateAndCvv"
+        android:layout_margin="16dp"
+        android:hint="Email Address"
+        android:inputType="textEmailAddress"
+        android:padding="12dp"
+        tools:ignore="NotSibling" />
+
+    <LinearLayout
+        android:id="@+id/buttonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextEmail"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+
+        android:gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_below="@id/editTextEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Send Details" />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
